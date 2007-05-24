@@ -16,7 +16,7 @@ Source2:        http://prdownloads.sourceforge.net/eric-ide/%{name}-i18n-fr-%{ve
 Source3:        http://prdownloads.sourceforge.net/eric-ide/%{name}-i18n-ru-%{version}.tar.bz2
 URL:		http://www.die-offenbachs.de/detlev/eric3.html
 BuildRoot:	%{_tmppath}/%{name}-buildroot
-BuildRequires:	libqscintilla-devel python-devel >= %{pyver} PyQt ImageMagick
+BuildRequires:	qscintilla-devel python-devel >= %{pyver} PyQt ImageMagick
 Requires:	PyQt 
 BuildArch: noarch
 
