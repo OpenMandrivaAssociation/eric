@@ -1,6 +1,6 @@
 %define name 	eric
 %define version 3.9.5
-%define release %mkrel 1
+%define release %mkrel 2
 
 # py_ver, because modules have to be recompiled for another Python version
 
@@ -54,11 +54,9 @@ mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=Eric3
-Comment=%{Summary}
+Comment=Python IDE
 Exec=%{_bindir}/%{name}3 
-
 Icon=%{name}
-
 Terminal=false
 Type=Application
 Categories=Qt;Development;X-MandrivaLinux-MoreApplications-Development-DevelopmentEnvironments;
