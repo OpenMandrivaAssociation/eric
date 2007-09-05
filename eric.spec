@@ -3,7 +3,7 @@ Version: 4.0.1
 Release: %mkrel 1
 Summary: Eric is a full featured Python and Ruby editor and IDE
 License: GPL
-Group: Development
+Group: Development/Python
 Source0: %{name}4-%{version}.tar.gz
 Source1: %{name}4-i18n-de-%{version}.tar.gz
 Source2: %{name}4-i18n-fr-%{version}.tar.gz
