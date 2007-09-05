@@ -18,7 +18,6 @@ BuildRequires: python-qt4-qscintilla
 %py_requires -d
 Requires: python-qt4
 Requires: python-svn
-Requires"
 BuildArch: noarch
 
 %description
