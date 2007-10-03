@@ -1,6 +1,6 @@
 Name: eric
 Version: 4.0.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Eric is a full featured Python and Ruby editor and IDE
 License: GPL
 Group: Development/Python
@@ -17,6 +17,7 @@ BuildRequires: python-qt4
 BuildRequires: python-qt4-qscintilla
 %py_requires -d
 Requires: python-qt4
+Requires: python-qt4-qscintilla
 Requires: python-svn
 BuildArch: noarch
 
