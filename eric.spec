@@ -10,6 +10,7 @@ Source2: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-fr-%{v
 Source3: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-ru-%{version}.tar.gz
 Source4: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-cs_CZ-%{version}.tar.gz
 URL: http://www.die-offenbachs.de/eric/index.html
+BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires: qscintilla-qt4-devel 
 BuildRequires: python-sip
 BuildRequires: python-qt4
