@@ -22,10 +22,11 @@ Requires: python-svn
 BuildArch: noarch
 
 %description
-Eric is a full featured Python and Ruby editor and IDE, written in python. It is based on the cross
-platform Qt gui toolkit, integrating the highly flexible Scintilla editor control. It is designed to
-be usable as everdays' quick and dirty editor as well as being usable as a professional project
-management tool integrating many advanced features Python offers the professional coder.
+Eric is a full featured Python and Ruby editor and IDE, written in python. It
+is based on the cross platform Qt gui toolkit, integrating the highly flexible
+Scintilla editor control. It is designed to be usable as everdays' quick and
+dirty editor as well as being usable as a professional project management tool
+integrating many advanced features Python offers the professional coder.
 
 %prep
 %setup -q -n %{name}4-%version
