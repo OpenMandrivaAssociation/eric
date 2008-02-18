@@ -1,7 +1,7 @@
 Name: eric
 Version: 4.0.4
 Release: %mkrel 1
-Summary: Eric is a full featured Python and Ruby editor and IDE
+Summary: Full featured Python and Ruby editor and IDE
 License: GPLv2+
 Group: Development/Python
 Source0: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-%{version}.tar.gz
