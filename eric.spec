@@ -42,10 +42,8 @@ mkdir -p %buildroot%py_puresitedir/%{name}
 %{__python} install.py -i %buildroot -b %{_bindir}
 
 %post
-%update_menus
 %update_icon_cache hicolor
 %postun
-%clean_menus
 %clean_icon_cache hicolor
 
 %clean
