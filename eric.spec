@@ -1,6 +1,6 @@
 Name: eric
-Version: 4.0.4
-Release: %mkrel 2
+Version: 4.1.3
+Release: %mkrel 1
 Summary: Full featured Python and Ruby editor and IDE
 License: GPLv2+
 Group: Development/Python
@@ -8,7 +8,7 @@ Source0: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-%{version}.
 Source1: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-de-%{version}.tar.gz
 Source2: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-fr-%{version}.tar.gz
 Source3: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-ru-%{version}.tar.gz
-Source4: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-cs_CZ-%{version}.tar.gz
+Source4: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-cs-%{version}.tar.gz
 URL: http://www.die-offenbachs.de/eric/index.html
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires: qscintilla-qt4-devel 
