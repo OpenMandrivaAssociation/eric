@@ -40,7 +40,8 @@ integrating many advanced features Python offers the professional coder.
 %install
 rm -rf %buildroot
 mkdir -p %buildroot%py_puresitedir/%{name}
-%{__python} install.py -i %buildroot -b %{_bindir}
+%{__python} install.py -i %{buildroot} -b %{_bindir} -d %{py_puresitedir}
+
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -56,9 +57,9 @@ Categories=Development;IDE;QT;
 EOF
 
 mkdir -p %{buildroot}%{_iconsdir}/hicolor/{48x48,32x32,16x16}/apps
-convert -scale 48 %{buildroot}%{py_puresitedir}/eric4/icons/default/eric.png %{buildroot}%{_iconsdir}/hicolor/48x48/apps/%{name}.png
-convert -scale 32 %{buildroot}%{py_puresitedir}/eric4/icons/default/eric.png %{buildroot}%{_iconsdir}/hicolor/32x32/apps/%{name}.png
-convert -scale 16 %{buildroot}%{py_puresitedir}/eric4/icons/default/eric.png %{buildroot}%{_iconsdir}/hicolor/16x16/apps/%{name}.png
+convert -scale 48 %{buildroot}%{py_puresitedir}/eric4/icons/default/erict.png %{buildroot}%{_iconsdir}/hicolor/48x48/apps/%{name}.png
+convert -scale 32 %{buildroot}%{py_puresitedir}/eric4/icons/default/erict.png %{buildroot}%{_iconsdir}/hicolor/32x32/apps/%{name}.png
+convert -scale 16 %{buildroot}%{py_puresitedir}/eric4/icons/default/erict.png %{buildroot}%{_iconsdir}/hicolor/16x16/apps/%{name}.png
 
 %post
 %{update_icon_cache hicolor}
