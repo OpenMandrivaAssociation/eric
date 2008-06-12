@@ -61,13 +61,17 @@ convert -scale 48 %{buildroot}%{py_puresitedir}/eric4/icons/default/erict.png %{
 convert -scale 32 %{buildroot}%{py_puresitedir}/eric4/icons/default/erict.png %{buildroot}%{_iconsdir}/hicolor/32x32/apps/%{name}.png
 convert -scale 16 %{buildroot}%{py_puresitedir}/eric4/icons/default/erict.png %{buildroot}%{_iconsdir}/hicolor/16x16/apps/%{name}.png
 
+%if %mdkversion < 200900
 %post
 %{update_icon_cache hicolor}
 %{update_menus}
+%endif
 
+%if %mdkversion < 200900
 %postun
 %{clean_icon_cache hicolor}
 %{clean_menus}
+%endif
 
 %clean
 rm -rf %{buildroot}
