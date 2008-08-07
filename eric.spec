@@ -1,6 +1,6 @@
 Name: eric
-Version: 4.1.5
-Release: %mkrel 2
+Version: 4.1.6
+Release: %mkrel 1
 Summary: Full featured Python and Ruby editor and IDE
 License: GPLv2+
 Group: Development/Python
