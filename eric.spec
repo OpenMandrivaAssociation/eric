@@ -11,6 +11,7 @@ Source3: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-ru-%{v
 Source4: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-cs-%{version}.tar.gz
 Source5: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-es-%{version}.tar.gz
 Source6: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-tr-%{version}.tar.gz
+Patch0: eric4-4.2.0-destdir.patch
 URL: http://www.die-offenbachs.de/eric/index.html
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires: qscintilla-qt4-devel 
@@ -38,12 +39,14 @@ integrating many advanced features Python offers the professional coder.
 %setup -q -n %{name}4-%version -D -T -b 2
 %setup -q -n %{name}4-%version -D -T -b 3
 %setup -q -n %{name}4-%version -D -T -b 4
+%setup -q -n %{name}4-%version -D -T -b 5
+%setup -q -n %{name}4-%version -D -T -b 6
+%patch0 -p0
 
 %install
 rm -rf %buildroot
 mkdir -p %buildroot%py_puresitedir/%{name}
 %{__python} install.py -i %{buildroot} -b %{_bindir} -d %{py_puresitedir}
-
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -54,7 +57,6 @@ Exec=eric4
 Icon=%{name}
 Terminal=false
 Type=Application
-Encoding=UTF-8
 Categories=Development;IDE;QT;
 EOF
 
@@ -82,6 +84,7 @@ rm -rf %{buildroot}
 %defattr(-, root, root, 755)
 %doc README THANKS
 %{_bindir}/*
+%{qt4dir}/qsci/api
 %py_puresitedir/*
 %{_datadir}/applications/mandriva-%{name}.desktop
 %{_iconsdir}/hicolor/48x48/apps/%{name}.png
