@@ -1,5 +1,5 @@
 Name: eric
-Version: 4.2.5
+Version: 4.3.0
 Release: %mkrel 1
 Summary: Full featured Python and Ruby editor and IDE
 License: GPLv2+
@@ -11,6 +11,7 @@ Source3: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-ru-%{v
 Source4: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-cs-%{version}.tar.gz
 Source5: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-es-%{version}.tar.gz
 Source6: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-tr-%{version}.tar.gz
+Source7: http://dfn.dl.sourceforge.net/sourceforge/eric-ide/%{name}4-i18n-zh_CN.GB2312-%{version}.tar.gz
 Patch0: eric4-4.2.0-destdir.patch
 URL: http://www.die-offenbachs.de/eric/index.html
 BuildRoot:	%{_tmppath}/%{name}-buildroot
@@ -41,6 +42,7 @@ integrating many advanced features Python offers the professional coder.
 %setup -q -n %{name}4-%version -D -T -b 4
 %setup -q -n %{name}4-%version -D -T -b 5
 %setup -q -n %{name}4-%version -D -T -b 6
+%setup -q -n %{name}4-%version -D -T -b 7
 %patch0 -p0
 
 %install
