@@ -1,6 +1,6 @@
 Name: eric
 Version: 4.4.0
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Full featured Python and Ruby editor and IDE
 License: GPLv2+
 Group: Development/Python
@@ -23,6 +23,7 @@ BuildRequires: imagemagick
 Requires: python-qt4
 Requires: python-qt4-qscintilla
 Requires: python-svn
+Requires: python-qt4-help
 BuildArch: noarch
 
 %description
