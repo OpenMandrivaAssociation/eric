@@ -1,6 +1,6 @@
 Name: eric
 Version: 4.4.1
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Full featured Python and Ruby editor and IDE
 License: GPLv2+
 Group: Development/Python
@@ -12,6 +12,7 @@ Source4: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name
 Source5: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-es-%{version}.tar.gz
 Source6: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-tr-%{version}.tar.gz
 Source7: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-zh_CN.GB2312-%{version}.tar.gz
+Source8: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-it-%{version}.tar.gz
 URL: http://eric-ide.python-projects.org/
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires: qscintilla-qt4-devel 
@@ -43,6 +44,7 @@ integrating many advanced features Python offers the professional coder.
 %setup -q -n %{name}4-%version -D -T -b 5
 %setup -q -n %{name}4-%version -D -T -b 6
 %setup -q -n %{name}4-%version -D -T -b 7
+%setup -q -n %{name}4-%version -D -T -b 8
 
 %install
 rm -rf %buildroot
