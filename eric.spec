@@ -4,15 +4,15 @@ Release: %mkrel 2
 Summary: Full featured Python and Ruby editor and IDE
 License: GPLv2+
 Group: Development/Python
-Source0: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-%{version}.tar.gz
-Source1: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-de-%{version}.tar.gz
-Source2: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-fr-%{version}.tar.gz
-Source3: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-ru-%{version}.tar.gz
-Source4: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-cs-%{version}.tar.gz
-Source5: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-es-%{version}.tar.gz
-Source6: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-tr-%{version}.tar.gz
-Source7: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-zh_CN.GB2312-%{version}.tar.gz
-Source8: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{name}/%{name}4-i18n-it-%{version}.tar.gz
+Source0: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-%{version}.tar.gz
+Source1: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-de-%{version}.tar.gz
+Source2: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-fr-%{version}.tar.gz
+Source3: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-ru-%{version}.tar.gz
+Source4: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-cs-%{version}.tar.gz
+Source5: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-es-%{version}.tar.gz
+Source6: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-tr-%{version}.tar.gz
+Source7: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-zh_CN.GB2312-%{version}.tar.gz
+Source8: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-it-%{version}.tar.gz
 URL: http://eric-ide.python-projects.org/
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires: qscintilla-qt4-devel 
