@@ -1,6 +1,6 @@
 Name: eric
-Version: 4.4.7
-Release: %mkrel 3
+Version: 4.4.10
+Release: %mkrel 1
 Summary: Full featured Python and Ruby editor and IDE
 License: GPLv2+
 Group: Development/Python
@@ -13,6 +13,7 @@ Source5: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{vers
 Source6: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-tr-%{version}.tar.gz
 Source7: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-zh_CN.GB2312-%{version}.tar.gz
 Source8: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-it-%{version}.tar.gz
+Source9: http://prdownloads.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}4-i18n-en-%{version}.tar.gz
 URL: http://eric-ide.python-projects.org/
 BuildRoot:	%{_tmppath}/%{name}-buildroot
 BuildRequires: qscintilla-qt4-devel 
@@ -20,7 +21,6 @@ BuildRequires: python-sip
 BuildRequires: python-qt4
 BuildRequires: python-qt4-qscintilla
 BuildRequires: imagemagick
-%py_requires -d
 Requires: python-qt4
 Requires: python-qt4-qscintilla
 Requires: python-svn
@@ -45,6 +45,7 @@ integrating many advanced features Python offers the professional coder.
 %setup -q -n %{name}4-%version -D -T -b 6
 %setup -q -n %{name}4-%version -D -T -b 7
 %setup -q -n %{name}4-%version -D -T -b 8
+%setup -q -n %{name}4-%version -D -T -b 9
 
 %install
 rm -rf %buildroot
