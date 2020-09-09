@@ -1,11 +1,2 @@
 sources:
   eric6-20.9.tar.gz: e03450526442f8c18bf460aa38a6eeb503873917
-  eric4-i18n-cs-4.5.7.tar.gz: aa30180bb101b9185ad9388ec6e5c1b8ae49f5b0
-  eric4-i18n-de-4.5.7.tar.gz: ff07ba139387ac21f517e0a22292477660d33599
-  eric4-i18n-en-4.5.7.tar.gz: 33ecb0ecff6b77a08670e449166fde4ca1f9b935
-  eric4-i18n-es-4.5.7.tar.gz: 7875da9a280ec5612c48063484954af11ad3d72e
-  eric4-i18n-fr-4.5.7.tar.gz: 4976cc6bde32e556d3094d0cfea315a0a9d3d864
-  eric4-i18n-it-4.5.7.tar.gz: ab6fd4dbdea1a6fbfe1f4bca4c3116c2a2d18a8c
-  eric4-i18n-ru-4.5.7.tar.gz: 4fb390a0fd2c53fbe1d0a11076219199d7e5bdea
-  eric4-i18n-tr-4.5.7.tar.gz: 93d785662d65ad46b7e83cfe4e1218ebc0677f7e
-  eric4-i18n-zh_CN.GB2312-4.5.7.tar.gz: 9165fd5042d59d2221abffd128846eda2b80f23a
