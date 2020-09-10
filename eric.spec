@@ -12,7 +12,7 @@ BuildRequires:	python-qt5-devel
 BuildRequires:	python-qt5-qscintilla
 BuildRequires:	python-qt5-chart
 BuildRequires:	python-qt5-webengine
-BuildRequires:	python3qt5-webengine-widgets
+BuildRequires:	python-qt5-webengine-widgets
 BuildRequires:	qscintilla-qt5-devel
 BuildRequires:	imagemagick
 BuildRequires:	desktop-file-utils
