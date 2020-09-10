@@ -29,7 +29,7 @@ dirty editor as well as being usable as a professional project management tool
 integrating many advanced features Python offers the professional coder.
 
 %prep
-%auttosetup -n %{name}6-%{version} -p1
+%autosetup -n %{name}6-%{version} -p1
 
 %build
 # nothingg to do
