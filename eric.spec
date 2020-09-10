@@ -10,9 +10,9 @@ BuildRequires:	pkgconfig(python)
 BuildRequires:	python-sip
 BuildRequires:	python-qt5-devel
 BuildRequires:	python-qt5-qscintilla
-BuildRequires:	python3-qt5-chart
-BuildRequires:	python3-qt5-webengine
-BuildRequires:	python3-qt5-webengine-widgets
+BuildRequires:	python-qt5-chart
+BuildRequires:	python-qt5-webengine
+BuildRequires:	python3qt5-webengine-widgets
 BuildRequires:	qscintilla-qt5-devel
 BuildRequires:	imagemagick
 BuildRequires:	desktop-file-utils
@@ -35,10 +35,10 @@ integrating many advanced features Python offers the professional coder.
 # nothingg to do
 
 %install
-%{__python} install.py \
+python install.py \
     -i %{buildroot} \
     -b %{_bindir} \
-    -d %{python3_sitelib} \
+    -d %{python_sitelib} \
     -a %{_qt5_datadir}/qsci/api
 
 mkdir -p %{buildroot}%{_iconsdir}/hicolor/{128x128,64x64,48x48,32x32,16x16}/apps
