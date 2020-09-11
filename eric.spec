@@ -1,11 +1,15 @@
+%global debug_package %{nil}
+%define oname %{name}6
+
 Name:		eric
 Version:	20.9
 Release:	1
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPLv2+
 Group:		Development/Python
-Source0:	 http://heanet.dl.sourceforge.net/project/eric-ide/eric4/stable/%{version}/%{name}6-%{version}.tar.gz
 URL:		http://eric-ide.python-projects.org/
+Source0:	https://sourceforge.net/projects/eric-ide/files/%{oname}/stable/%{version}/%{oname}-%{version}.tar.gz
+BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python-sip
 BuildRequires:	python-qt5-devel
@@ -14,6 +18,7 @@ BuildRequires:	python-qt5-chart
 BuildRequires:	python-qt5-webengine
 BuildRequires:	python-qt5-webengine-widgets
 BuildRequires:	qscintilla-qt5-devel
+BuildRequires:	qt5-qtbase-macros
 BuildRequires:	imagemagick
 BuildRequires:	desktop-file-utils
 Requires:	python-qt5-qscintilla
@@ -29,7 +34,7 @@ dirty editor as well as being usable as a professional project management tool
 integrating many advanced features Python offers the professional coder.
 
 %prep
-%autosetup -n %{name}6-%{version} -p1
+%autosetup -n %{oname}-%{version} -p1
 
 %build
 # nothingg to do
@@ -39,7 +44,8 @@ python install.py \
     -i %{buildroot} \
     -b %{_bindir} \
     -d %{python_sitelib} \
-    -a %{_qt5_datadir}/qsci/api
+    -a %{_qt5_datadir}/qsci/api \
+    -z
 
 mkdir -p %{buildroot}%{_iconsdir}/hicolor/{128x128,64x64,48x48,32x32,16x16}/apps
 
@@ -55,14 +61,17 @@ convert -scale 16 %{buildroot}%{_datadir}/pixmaps/ericWeb.png %{buildroot}%{_ico
 # deprecated icons
 rm -rf %{buildroot}%{_datadir}/pixmaps
 
-%files
+%find_lang %{name} --with-qt --all-name
+
+%files -f %{name}.lang
 %doc eric/docs/{changelog,README.rst,THANKS}
 %license eric/docs/LICENSE.GPL3
 %{_bindir}/%{name}*
 %{_datadir}/applications/%{name}*.desktop
 %{_iconsdir}/hicolor/*/apps/eric*.png
-%{_metainfodir}/%{name}.appdata.xml
-%{python_sitelib}/%{name}/
-%{python_sitelib}/%{name}plugins/
-%{python_sitelib}/%{name}config.py*
+%{_metainfodir}/%{oname}.appdata.xml
+%{python_sitelib}/__pycache__/eric6config.cpython-*.pyc
+%{python_sitelib}/%{oname}/
+%{python_sitelib}/%{oname}plugins/
+%{python_sitelib}/%{oname}config.py*
 %{_qt5_datadir}/qsci/api/*/*
