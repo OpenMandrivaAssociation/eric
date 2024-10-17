@@ -7,7 +7,7 @@ Release:	1
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPLv2+
 Group:		Development/Python
-URL:		http://eric-ide.python-projects.org/
+URL:		https://eric-ide.python-projects.org/
 Source0:	https://downloads.sourceforge.net/project/eric-ide/eric7/%{version}/eric7-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	pkgconfig(python)
