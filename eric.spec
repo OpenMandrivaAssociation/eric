@@ -25,6 +25,28 @@ BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6SvgWidgets)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	desktop-file-utils
+# Anything commented out is needed from BuildRequires:
+BuildRequires:	python%{pyver}dist(black)
+BuildRequires:  python%{pyver}dist(coverage)
+#BuildRequires:  python%{pyver}dist(cyclonedx-bom)
+BuildRequires:  python%{pyver}dist(isort)
+BuildRequires:  python%{pyver}dist(jedi)
+BuildRequires:  python%{pyver}dist(parso)
+#BuildRequires:  python%{pyver}dist(pipdeptree)
+BuildRequires:  python%{pyver}dist(psutil)
+BuildRequires:  python%{pyver}dist(requests)
+BuildRequires:  python%{pyver}dist(semver)
+#BuildRequires:  python%{pyver}dist(spdx-license-list)
+BuildRequires:  python%{pyver}dist(tomlkit)
+#BuildRequires:  python%{pyver}dist(watchdog)
+BuildRequires:  python%{pyver}dist(chardet)
+BuildRequires:  python%{pyver}dist(docutils)
+#BuildRequires:  python%{pyver}dist(esprima)
+#BuildRequires:  python%{pyver}dist(fido2)
+BuildRequires:  python%{pyver}dist(pyenchant)
+BuildRequires:  python%{pyver}dist(pyusb)
+BuildRequires:  python%{pyver}dist(pyyaml)
+
 Requires:	python-qt6-webengine
 Requires:	python-qt6-qscintilla
 Requires:	python-qt6-svg-widgets
