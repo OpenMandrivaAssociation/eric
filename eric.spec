@@ -2,7 +2,7 @@
 %define oname %{name}7
 
 Name:		eric
-Version:	23.11
+Version:	25.8
 Release:	1
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPLv2+
