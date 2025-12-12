@@ -3,7 +3,7 @@
 
 Name:		eric
 Version:	25.8
-Release:	1
+Release:	2
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPLv2+
 Group:		Development/Python
