@@ -1,0 +1,4 @@
+# Manuals are in built-in Documentation.
+addFilter("no-manual-page-for-binary")
+# Result of using fdupes to reduce file duplication.
+addFilter("cross-directory-hard-link")
