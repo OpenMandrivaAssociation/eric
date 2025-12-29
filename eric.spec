@@ -3,7 +3,7 @@
 
 Name:		eric
 Version:	25.12
-Release:	1
+Release:	2
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPLv2+
 Group:		Development/Python
@@ -169,7 +169,7 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/eric7_mpy.desktop
 %{_iconsdir}/hicolor/*/apps/eric*.png
 %{_metainfodir}/%{oname}.appdata.xml
 %{python_sitelib}/%{oname}/
-%exclude %{python_sitelib}/%{oname}/i18n
+%exclude %{python_sitelib}/%{oname}/i18n/*
 %{python_sitelib}/%{oname}plugins/
 %{python_sitelib}/%{oname}config.py*
 %{_qtdir}/qsci/api/*/*
