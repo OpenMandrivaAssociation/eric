@@ -3,7 +3,7 @@
 
 Name:		eric
 Version:	25.12
-Release:	2
+Release:	3
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPLv2+
 Group:		Development/Python
@@ -151,10 +151,10 @@ chmod a+x %{buildroot}%{python_sitelib}/%{oname}/{MicroPython/Tools/uf2conv,PipI
 sed -i -e '1i#!/usr/bin/python3' %{buildroot}%{python_sitelib}/eric7config.py %{buildroot}%{python_sitelib}/%{oname}/eric7_mpy.py
 chmod a+x %{buildroot}%{python_sitelib}/eric7config.py
 
-# find i18n
-%find_lang %{name} --with-qt --all-name
 # find dupes
 %fdupes %{buildroot}%{python_sitelib}/%{oname}
+# find i18n
+%find_lang %{name} --with-qt --all-name
 
 %check
 appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/eric7.appdata.xml
@@ -168,8 +168,13 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/eric7_mpy.desktop
 %{_datadir}/applications/%{name}*.desktop
 %{_iconsdir}/hicolor/*/apps/eric*.png
 %{_metainfodir}/%{oname}.appdata.xml
-%{python_sitelib}/%{oname}/
-%exclude %{python_sitelib}/%{oname}/i18n/*
+%{python_sitelib}/%{oname}/*.py
+%{python_sitelib}/%{oname}/*.pyw
+%{python_sitelib}/%{oname}/icons
+%{python_sitelib}/%{oname}/pixmaps
+%{python_sitelib}/%{oname}/[A-Z]*/
+%{python_sitelib}/%{oname}/*.ekj
+%{python_sitelib}/%{oname}/*.json
 %{python_sitelib}/%{oname}plugins/
 %{python_sitelib}/%{oname}config.py*
 %{_qtdir}/qsci/api/*/*
