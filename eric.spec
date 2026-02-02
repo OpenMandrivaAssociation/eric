@@ -3,7 +3,7 @@
 
 Name:		eric
 Version:	26.2
-Release:	1
+Release:	2
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPLv2+
 Group:		Development/Python
@@ -46,6 +46,7 @@ BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(pipdeptree)
 BuildRequires:	python%{pyver}dist(psutil)
 BuildRequires:	python%{pyver}dist(pyenchant)
+BuildRequires:	python%{pyver}dist(pygments)
 BuildRequires:	python%{pyver}dist(pyqt6-charts)
 BuildRequires:	python%{pyver}dist(pyqt6-graphs)
 BuildRequires:	python%{pyver}dist(pyqt6-qscintilla)
