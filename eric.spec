@@ -2,7 +2,7 @@
 %define oname %{name}7
 
 Name:		eric
-Version:	26.3
+Version:	26.4
 Release:	1
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPLv2+
@@ -10,6 +10,8 @@ Group:		Development/Python
 URL:		https://eric-ide.python-projects.org/
 # URL:      https://sourceforge.net/projects/eric-ide
 Source0:	https://downloads.sourceforge.net/project/eric-ide/eric7/%{version}/eric7-%{version}.tar.gz
+Source100:  %{name}.rpmlintrc
+
 BuildArch:	noarch
 BuildRequires:	appstream-util
 # From pyqt6BaseModulesList
