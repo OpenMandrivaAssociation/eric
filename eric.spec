@@ -2,13 +2,14 @@
 %define oname %{name}7
 
 Name:		eric
-Version:	26.5
+Version:	26.6
 Release:	1
 Summary:	Full featured Python and Ruby editor and IDE
-License:	GPLv2+
+License:	GPL-2.0-or-later
 Group:		Development/Python
 URL:		https://eric-ide.python-projects.org/
-# URL:      https://sourceforge.net/projects/eric-ide
+# upstream - https://sourceforge.net/projects/eric-ide
+# Changelog - https://eric-ide.python-projects.org/eric-news.html
 Source0:	https://downloads.sourceforge.net/project/eric-ide/eric7/%{version}/eric7-%{version}.tar.gz
 Source100:  %{name}.rpmlintrc
 
@@ -148,10 +149,10 @@ rm -rfv %{buildroot}%{_datadir}/icons/eric*
 
 # Make sure these files are marked executable
 chmod a+x %{buildroot}%{python_sitelib}/%{oname}/%{oname}_*.py
-chmod a+x %{buildroot}%{python_sitelib}/%{oname}/{MicroPython/Tools/uf2conv,PipInterface/pipcleanup,PipInterface/piplicenses,Plugins/CheckerPlugins/CodeStyleChecker/pycodestyle,Plugins/VcsPlugins/vcsMercurial/HisteditExtension/HgHisteditEditor,Tools/webBrowserSupport,UI/upgrader}.py
+chmod a+x %{buildroot}%{python_sitelib}/%{oname}/{MicroPython/Tools/uf2conv,PipInterface/pipcleanup,PipInterface/piplicenses,Plugins/VcsPlugins/vcsMercurial/HisteditExtension/HgHisteditEditor,Tools/webBrowserSupport,UI/upgrader}.py
 
 # insert missing shebangs
-sed -i -e '1i#!/usr/bin/python3' %{buildroot}%{python_sitelib}/eric7config.py %{buildroot}%{python_sitelib}/%{oname}/eric7_mpy.py
+sed -i -e '1i#!/usr/bin/python' %{buildroot}%{python_sitelib}/eric7config.py %{buildroot}%{python_sitelib}/%{oname}/eric7_mpy.py
 chmod a+x %{buildroot}%{python_sitelib}/eric7config.py
 
 # find dupes
