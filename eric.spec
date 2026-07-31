@@ -2,7 +2,7 @@
 %define oname %{name}7
 
 Name:		eric
-Version:	26.6
+Version:	26.7
 Release:	1
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPL-2.0-or-later
@@ -122,7 +122,7 @@ dirty editor as well as being usable as a professional project management tool
 integrating many advanced features Python offers the professional coder.
 
 %prep
-%autosetup -n %{oname}-%{version} -p1
+%autosetup -n eric7-26.7 -p1
 # sed the correct interpreter in this order.
 find . -name \*.py -exec sed -i -e 's@#!/usr/bin/env python3@#!/usr/bin/python3@g' '{}' \;
 find . -name \*.py -exec sed -i -e 's@#!/usr/bin/env python@#!/usr/bin/python3@g' '{}' \;
