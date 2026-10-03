@@ -2,7 +2,7 @@
 %define oname %{name}7
 
 Name:		eric
-Version:	26.7
+Version:	26.10
 Release:	1
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPL-2.0-or-later
@@ -32,15 +32,12 @@ BuildRequires:	python-qt6-pdf
 BuildRequires:	python-qt6-svg-widgets
 # Anything commented out is needed from BuildRequires:
 BuildRequires:	python%{pyver}dist(asttokens)
-BuildRequires:	python%{pyver}dist(black)
 BuildRequires:	python%{pyver}dist(chardet)
 BuildRequires:	python%{pyver}dist(coverage)
 BuildRequires:	python%{pyver}dist(cyclonedx-bom)
 BuildRequires:	python%{pyver}dist(docutils)
 BuildRequires:	python%{pyver}dist(editorconfig)
-BuildRequires:	python%{pyver}dist(esprima)
 BuildRequires:	python%{pyver}dist(fido2)
-BuildRequires:	python%{pyver}dist(isort)
 BuildRequires:	python%{pyver}dist(jedi)
 BuildRequires:	python%{pyver}dist(markdown)
 BuildRequires:	python%{pyver}dist(packaging)
@@ -59,10 +56,10 @@ BuildRequires:	python%{pyver}dist(pyyaml)
 BuildRequires:	python%{pyver}dist(requests)
 BuildRequires:	python%{pyver}dist(semver)
 BuildRequires:	python%{pyver}dist(sip)
-BuildRequires:	python%{pyver}dist(spdx-license-list)
+BuildRequires:	python%{pyver}dist(spdx-license-list) >= 3.26.0
 BuildRequires:	python%{pyver}dist(tomlkit)
 BuildRequires:	python%{pyver}dist(trove-classifiers)
-BuildRequires:	python%{pyver}dist(watchdog)
+BuildRequires:	python%{pyver}dist(watchdog) >= 5.0.0
 BuildRequires:	python%{pyver}dist(wheel)
 
 Requires:	python%{pyver}dist(pip)
@@ -74,13 +71,10 @@ Requires:	python-qt6-help
 Requires:	python-qt6-pdf
 # From requiredModulesList
 Requires:	python%{pyver}dist(asttokens)
-Requires:	python%{pyver}dist(black)
 Requires:	python%{pyver}dist(coverage)
 Requires:	python%{pyver}dist(cyclonedx-bom)
 Requires:	python%{pyver}dist(editorconfig)
-Requires:	python%{pyver}dist(isort)
 Requires:	python%{pyver}dist(jedi)
-Requires:	python%{pyver}dist(markdown)
 Requires:	python%{pyver}dist(packaging)
 Requires:	python%{pyver}dist(parso)
 Requires:	python%{pyver}dist(pipdeptree)
@@ -88,14 +82,13 @@ Requires:	python%{pyver}dist(psutil)
 Requires:	python%{pyver}dist(pygments)
 Requires:	python%{pyver}dist(requests)
 Requires:	python%{pyver}dist(semver)
-Requires:	python%{pyver}dist(spdx-license-list)
+Requires:	python%{pyver}dist(spdx-license-list) >= 3.26.0
 Requires:	python%{pyver}dist(tomlkit)
 Requires:	python%{pyver}dist(trove-classifiers)
-Requires:	python%{pyver}dist(watchdog)
+Requires:	python%{pyver}dist(watchdog) >= 5.0.0
 # From optionalModulesList
 Recommends:		python%{pyver}dist(chardet)
 Recommends:		python%{pyver}dist(docutils)
-Recommends:		python%{pyver}dist(esprima)
 Recommends:		python%{pyver}dist(fido2)
 Recommends:		python%{pyver}dist(markdown)
 Recommends:		python%{pyver}dist(pyenchant)
@@ -122,7 +115,7 @@ dirty editor as well as being usable as a professional project management tool
 integrating many advanced features Python offers the professional coder.
 
 %prep
-%autosetup -n eric7-26.7 -p1
+%autosetup -n eric7-%{version} -p1
 # sed the correct interpreter in this order.
 find . -name \*.py -exec sed -i -e 's@#!/usr/bin/env python3@#!/usr/bin/python3@g' '{}' \;
 find . -name \*.py -exec sed -i -e 's@#!/usr/bin/env python@#!/usr/bin/python3@g' '{}' \;
@@ -131,6 +124,9 @@ find . -name \*.py -exec sed -i -e 's@#!/usr/bin/env python@#!/usr/bin/python3@g
 # nothing to do
 
 %install
+# install.py imports eric7 while installing desktop files. The installer
+# archive keeps that package under eric/src, which is not on sys.path.
+PYTHONPATH="${PWD}/eric/src${PYTHONPATH:+:${PYTHONPATH}}" \
 python install.py \
     -i %{buildroot} \
     -b %{_bindir} \
@@ -166,6 +162,7 @@ test "$(grep '^Exec' %{buildroot}%{_datadir}/applications/eric7_ide.desktop)" = 
 desktop-file-validate %{buildroot}%{_datadir}/applications/eric7_browser.desktop
 desktop-file-validate %{buildroot}%{_datadir}/applications/eric7_ide.desktop
 desktop-file-validate %{buildroot}%{_datadir}/applications/eric7_mpy.desktop
+desktop-file-validate %{buildroot}%{_datadir}/applications/eric7_tray.desktop
 
 %files -f %{name}.lang
 %{_bindir}/%{name}*
