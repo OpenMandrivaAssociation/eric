@@ -1,0 +1,82 @@
+diff -ruN a/eric/scripts/install-debugclients.py b/eric/scripts/install-debugclients.py
+--- a/eric/scripts/install-debugclients.py	2026-10-02 15:51:07.000000000 +0200
++++ b/eric/scripts/install-debugclients.py	2026-10-17 18:15:50.688024074 +0200
+@@ -411,8 +411,8 @@
+         print("\n")
+ 
+     # perform dependency checks
+-    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 15, 0):
+-        print("Sorry, you must have Python 3.10.0 or higher, but less 3.15.0.")
++    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 16, 0):
++        print("Sorry, you must have Python 3.10.0 or higher, but less 3.16.0.")
+         print("Yours is {0}.".format(".".join(str(v) for v in sys.version_info[:3])))
+         exitScript(5)
+ 
+diff -ruN a/eric/scripts/install-server.py b/eric/scripts/install-server.py
+--- a/eric/scripts/install-server.py	2026-10-02 15:51:07.000000000 +0200
++++ b/eric/scripts/install-server.py	2026-10-17 18:15:50.688078274 +0200
+@@ -475,8 +475,8 @@
+         print("\n")
+ 
+     # perform dependency checks
+-    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 15, 0):
+-        print("Sorry, you must have Python 3.10.0 or higher, but less 3.15.0.")
++    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 16, 0):
++        print("Sorry, you must have Python 3.10.0 or higher, but less 3.16.0.")
+         print("Yours is {0}.".format(".".join(str(v) for v in sys.version_info[:3])))
+         exitScript(5)
+ 
+diff -ruN a/eric/scripts/install.py b/eric/scripts/install.py
+--- a/eric/scripts/install.py	2026-10-02 15:51:07.000000000 +0200
++++ b/eric/scripts/install.py	2026-10-17 18:15:50.687957013 +0200
+@@ -1773,8 +1773,8 @@
+         print("\n")
+ 
+     # perform dependency checks
+-    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 15, 0):
+-        print("Sorry, you must have Python 3.10.0 or higher, but less 3.15.0.")
++    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 16, 0):
++        print("Sorry, you must have Python 3.10.0 or higher, but less 3.16.0.")
+         print("Yours is {0}.".format(".".join(str(v) for v in sys.version_info[:3])))
+         exitScript(5)
+ 
+diff -ruN a/eric/src/eric7/VirtualEnv/VirtualenvConfigurationDialog.py b/eric/src/eric7/VirtualEnv/VirtualenvConfigurationDialog.py
+--- a/eric/src/eric7/VirtualEnv/VirtualenvConfigurationDialog.py	2026-01-01 12:30:10.000000000 +0100
++++ b/eric/src/eric7/VirtualEnv/VirtualenvConfigurationDialog.py	2026-10-17 18:15:50.688131805 +0200
+@@ -59,7 +59,7 @@
+         self.pythonExecPicker.setWindowTitle(self.tr("Python Interpreter"))
+         self.pythonExecPicker.setDefaultDirectory(PythonUtilities.getPythonExecutable())
+ 
+-        self.versionComboBox.addItems(["", "3.14", "3.13", "3.12", "3.11", "3.10"])
++        self.versionComboBox.addItems(["", "3.15", "3.14", "3.13", "3.12", "3.11", "3.10"])
+ 
+         self.__versionRe = re.compile(r""".*?(\d+\.\d+\.\d+).*""")
+ 
+diff -ruN a/install-debugclients.py b/install-debugclients.py
+--- a/install-debugclients.py	2026-10-02 15:54:46.000000000 +0200
++++ b/install-debugclients.py	2026-10-17 18:15:50.687858832 +0200
+@@ -411,8 +411,8 @@
+         print("\n")
+ 
+     # perform dependency checks
+-    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 15, 0):
+-        print("Sorry, you must have Python 3.10.0 or higher, but less 3.15.0.")
++    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 16, 0):
++        print("Sorry, you must have Python 3.10.0 or higher, but less 3.16.0.")
+         print("Yours is {0}.".format(".".join(str(v) for v in sys.version_info[:3])))
+         exitScript(5)
+ 
+diff -ruN a/install.py b/install.py
+--- a/install.py	2026-10-02 15:54:46.000000000 +0200
++++ b/install.py	2026-10-17 18:15:50.687776051 +0200
+@@ -1773,8 +1773,8 @@
+         print("\n")
+ 
+     # perform dependency checks
+-    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 15, 0):
+-        print("Sorry, you must have Python 3.10.0 or higher, but less 3.15.0.")
++    if sys.version_info < (3, 10, 0) or sys.version_info >= (3, 16, 0):
++        print("Sorry, you must have Python 3.10.0 or higher, but less 3.16.0.")
+         print("Yours is {0}.".format(".".join(str(v) for v in sys.version_info[:3])))
+         exitScript(5)
+ 
