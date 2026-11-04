@@ -2,8 +2,8 @@
 %define oname %{name}7
 
 Name:		eric
-Version:	26.10
-Release:	2
+Version:	26.11
+Release:	1
 Summary:	Full featured Python and Ruby editor and IDE
 License:	GPL-2.0-or-later
 Group:		Development/Python
@@ -12,8 +12,6 @@ URL:		https://eric-ide.python-projects.org/
 # Changelog - https://eric-ide.python-projects.org/eric-news.html
 Source0:	https://downloads.sourceforge.net/project/eric-ide/eric7/%{version}/eric7-%{version}.tar.gz
 Source100:  %{name}.rpmlintrc
-# 26.10 already parses Python 3.15, but the installers still refuse it.
-Patch0:		eric-26.10-python315.patch
 
 BuildArch:	noarch
 BuildRequires:	appstream-util
